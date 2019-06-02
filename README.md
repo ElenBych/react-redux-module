@@ -4,6 +4,8 @@ Create React Redux Module which creates a moduls in secs.
 
 ## Quick Overview
 
+Give the below mentioned command in your react projects' root directory
+
 ```sh
 create-react-redux-module user-profile
 ```
