@@ -2,9 +2,25 @@
 
 Create React Redux Module which creates a moduls in secs.
 
+## Installation
+
+Either through cloning with git or by using [npm](http://npmjs.org) (the recommended way):
+
+```bash
+npm install -g create-react-redux-module
+```
+
+And create-react-redux-module will be installed globally to your system path.
+
+You can also install create-react-redux-module as a development dependency:
+
+```bash
+npm install --save-dev create-react-redux-module
+```
+
 ## Quick Overview
 
-Give the below mentioned command in your react projects' root directory
+Give the below mentioned command in your react project's root directory
 
 ```sh
 create-react-redux-module user-profile
