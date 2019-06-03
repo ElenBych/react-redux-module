@@ -3,7 +3,7 @@ String.prototype.toKebabCase = function() {
 };
 
 String.prototype.toSnakeCase = function() {
-  return kebabSnakeCaseBase(this.valueOf()).replace(/ /g, ' _');
+  return kebabSnakeCaseBase(this.valueOf()).replace(/ /g, '_');
 };
 
 String.prototype.toCamalCase = function() {
