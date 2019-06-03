@@ -4,7 +4,7 @@
 
 const { argv } = require('process');
 const { existsSync, mkdirSync, writeFileSync } = require('fs');
-const path = require('path');
+const chalk = require('chalk');
 
 require('./caseConverter');
 
@@ -23,16 +23,51 @@ if (!existsSync('src')) {
   mkdirSync('src');
 }
 
-if (!existsSync(`src/${kebabCase}`)) {
-  mkdirSync(`src/${kebabCase}`);
+let componentContent = `import React, { Component } from 'react';
+import './${kebabCase}.scss';
+
+class ${titleCase} extends Component {
+  render() {
+    return (
+      <h1>
+        ${titleCase}
+      </h1>
+    );
+  }
 }
 
-writeFileSync(`src/${kebabCase}/${camelCase}Reducer.js`, '', 'utf8');
+export default ${titleCase};`;
 
-writeFileSync(`src/${kebabCase}/${titleCase}Action.js`, '', 'utf8');
-writeFileSync(`src/${kebabCase}/${titleCase}Constant.js`, '', 'utf8');
-writeFileSync(`src/${kebabCase}/${titleCase}Container.js`, '', 'utf8');
-writeFileSync(`src/${kebabCase}/${titleCase}Component.jsx`, '', 'utf8');
-writeFileSync(`src/${kebabCase}/${titleCase}-spec.js`, '', 'utf8');
+if (!existsSync(`src/${kebabCase}`)) {
+  mkdirSync(`src/${kebabCase}`);
+  console.log(chalk`{green.bold ✔  }${kebabCase} folder created`);
 
-writeFileSync(`src/${kebabCase}/${kebabCase}.scss`, '', 'utf8');
+  writeFileSync(`src/${kebabCase}/${titleCase}Container.js`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${titleCase}Container.js created`);
+
+  writeFileSync(`src/${kebabCase}/${titleCase}Constant.js`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${titleCase}Constant.js created`);
+
+  writeFileSync(`src/${kebabCase}/${camelCase}Reducer.js`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${camelCase}Reducer.js created`);
+
+  writeFileSync(`src/${kebabCase}/${titleCase}Action.js`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${titleCase}Action.js created`);
+
+  writeFileSync(`src/${kebabCase}/${titleCase}-spec.js`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${titleCase}-spec.js created`);
+
+  writeFileSync(`src/${kebabCase}/${kebabCase}.scss`, '', 'utf8');
+  console.log(chalk`{green.bold ✔  }${kebabCase}.scss created`);
+
+  writeFileSync(
+    `src/${kebabCase}/${titleCase}Component.jsx`,
+    componentContent,
+    'utf8'
+  );
+  console.log(chalk`{green.bold ✔  }${titleCase}Component.jsx created`);
+
+  console.log(chalk`
+  
+{green.bold ✔  ${titleCase} module created sucessfully!}`);
+}

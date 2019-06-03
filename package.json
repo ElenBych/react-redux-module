@@ -15,7 +15,9 @@
     "url": "https://github.com/vnoitkumar"
   },
   "homepage": "https://github.com/vnoitkumar/create-react-redux-module",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vnoitkumar/create-react-redux-module"
