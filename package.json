@@ -1,6 +1,6 @@
 {
   "name": "create-react-redux-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "VnoitKumar",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "MIT",
+  "author": {
+    "name": "Vinoth Kumar",
+    "url": "https://github.com/vnoitkumar"
+  },
+  "homepage": "https://github.com/vnoitkumar/create-react-redux-module",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vnoitkumar/create-react-redux-module"
+  }
 }

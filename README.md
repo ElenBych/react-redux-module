@@ -14,12 +14,13 @@ It will create a directory called `user-profile` inside the `scr` folder.
 Inside that directory, it will generate the initial redux module structure:
 
 ```sh
-user-profile
-├── user-profile.scss
-├── UserProfile-spec.js
-├── UserProfileAction.js
-├── UserProfileComponent.jsx
-├── UserProfileConstant.js
-├── UserProfileContainer.js
-└── userProfileReducer.js
+src
+└── user-profile
+  ├── user-profile.scss
+  ├── UserProfile-spec.js
+  ├── UserProfileAction.js
+  ├── UserProfileComponent.jsx
+  ├── UserProfileConstant.js
+  ├── UserProfileContainer.js
+  └── userProfileReducer.js
 ```
