@@ -18,6 +18,12 @@ You can also install create-react-redux-module as a development dependency:
 npm install --save-dev create-react-redux-module
 ```
 
+If you don't want to install it in your local machine, you can try this in your project's root directory
+
+```bash
+npx create-react-redux-module user-profile
+```
+
 ## Quick Overview
 
 Give the below mentioned command in your react project's root directory
